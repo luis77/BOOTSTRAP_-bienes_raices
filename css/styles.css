@@ -1,0 +1,148 @@
+:root {
+    --primario: #71b100;
+    --secundario: #e08709;
+} /*son variables para tenerlas como referencia(para acceder facilmente a ellas), no son usadas como tal en la hoja de estilos debido a que bootstrap no utiliza esta tecnica*/
+body {
+    font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, h4{
+    font-weight: 300;/*para hacerlos más delgados*/
+}
+.bg-success{
+    background-color: #71b100 !important;
+}
+/*768px es un tamaño standar de bootstrap*/
+@media(min-width: 768px){
+    /*cambia a color de verde a transparente en pantallas mas grandes*/
+    .barra.bg-success{
+        background-color: transparent !important;
+    }
+    .header{
+        position: relative;/*para posicionarlo encima del slider*/
+    }
+    .header .barra{
+        position: absolute;/*para posicionarlo encima del slider*/
+        z-index: 100; /*para posicionarlo encima del slider*/
+        width: 100%; /*para que tome de vuelta su lugar, todo su ancho, debido a que sin esto quedaria todo a la izquierda*/
+    }
+
+}
+
+.navbar-brand{
+    font-size: 2rem;
+    font-weight: 300;/*esta está en el weight descargado de lato*/
+}
+.navbar-brand span{
+    font-weight: 900;/*cambia el grosor de GDL*/
+}
+.navbar-dark .navbar-nav .nav-link{ /*obtenido del explorar elemento*/
+    text-transform: uppercase; /*es como el text-uppercase.*/
+    color: #ffffff;
+    font-size: .8rem;
+}
+/*Dropdown*/
+.dropdown-menu{
+    background-color: #71b100;
+}
+.dropdown-menu .dropdown-item {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.dropdown-menu .dropdown-item:hover{
+    background-color: #e08709;
+}
+/*Caption*/
+.carousel-caption h3 {
+    font-size: 2.4rem;
+}
+.bloque-info p{
+    font-size: 1.4rem;
+}
+.btn-warning{
+    background-color: #e08709;
+    color: #ffffff;
+    border-color: #e08709;
+    font-weight: 700;
+}
+/*Nosotros*/
+.sobre-nosotros h3{
+    font-size: 1rem;
+    font-weight: 700;
+}
+/*Anuncios*/
+.anuncios .card{
+    margin-bottom: 2rem;
+}
+.card-precio{
+    font-size: 1.1rem;
+    color: #71b100;
+}
+.card-descripcion img{
+    margin-right: .5rem;
+}
+/*Encuentra*/
+.encuentra{
+    background-image: url(../img/contacto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;/*hace que tome todo el espacio disponible*/
+}
+.encuentra .row{
+    height: 25rem;/*se le da una altura a la imagen y debe ser en el row*/
+}
+.encuentra h3{
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+/*Blog*/
+
+.entrada h3::after{ /*raya verde inferior del titulo*/
+    content: ''; /*se coloca con contenido vacío*/
+    display: block; /*se le coloca un display block para poder darle un alto y un ancho*/
+    width: 8rem;
+    height: .2rem;
+    background-color: #71b100;
+    margin-top: .5rem;
+}
+.meta span {
+    color: #e08709;
+}
+.btn-success{
+    background-color: #71b100;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.btn-success:hover{
+    border-color: #609602;
+}
+/*testimoniales*/
+.testimoniales{
+    background-color: #71b100;
+}
+.testimoniales .carousel-item{
+    padding-left: 2rem;
+}
+.testimoniales .testimonial-texto{
+    font-size: 1.4rem;
+    line-height: 2.6rem;/*interlineado para alinear la comilla con el texto*/
+    font-weight: 300;
+}
+.testimoniales .testimonial-texto::before{
+    content: open-quote;/*coloca la comilla*/
+    font-size: 4rem;
+    position: absolute;/*por defecto el slider viene en posicion relativa, por lo que debemos poner este elemento en absolute*/
+    left: 0;
+    top: 1rem;
+    font-weight: 900;
+}
+.testimoniales span {
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+/*footer*/
+.footer.bg-dark{
+    background-color: #333333!important;
+}
+.footer .nav-link{
+    color: #ffffff;
+    text-transform: uppercase;
+}
